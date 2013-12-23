@@ -1,0 +1,5 @@
+# Virtualenv stuff
+.Python
+bin/
+lib/
+include/

@@ -1,0 +1,3 @@
+[submodule "nltk-trainer"]
+	path = nltk-trainer
+	url = https://github.com/japerk/nltk-trainer
