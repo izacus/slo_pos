@@ -1,6 +1,32 @@
 # NLTK Slovenian POS tagger
 
+[![Build Status](https://travis-ci.org/izacus/slo_pos.svg?branch=master)](https://travis-ci.org/izacus/slo_pos)
+
 This is a project that uses [IJS JOS-1M corpus][1] to train a part-of-speech tagger for Slovenian language.
+
+## Quick usage
+
+POS tagger is available on PyPi with prebuilt dictionary.
+Installation:
+
+```
+pip install slopos
+```
+
+Usage:
+
+```
+import slopos
+
+slopos.tag("Jaz sem iz okolice Ljubljane")
+
+> [('Jaz', 'ZOP-EI'),
+ ('sem', 'GP-SPE-N'),
+ ('iz', 'DR'),
+ ('okolice', 'SOZER'),
+ ('Ljubljane', 'SLZER.')]
+```
+
 
 ## Prepared files
 
@@ -64,7 +90,7 @@ Usage:
 
 ```
 import pickle
-sl_tagger = pickle.load('out/sl-tagger.pickle)
+sl_tagger = pickle.load(open('out/sl-tagger.pickle', 'rb'))
 
 sl_tagger.tag(["Jaz", "sem", "iz", "okolice", "Ljubljane"])
 
