@@ -27,6 +27,7 @@ slopos.tag("Jaz sem iz okolice Ljubljane")
  ('Ljubljane', 'SLZER.')]
 ```
 
+Tag reference is contained in `tag_reference-sl.txt` (slovenian) and `tag_reference-en.txt` files respectively.
 
 ## Prepared files
 
