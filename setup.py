@@ -16,6 +16,6 @@ setup(name="SloPOS",
           "Programming Language :: Python",
           "Topic :: Text Processing :: Linguistic"
       ],
-      install_require=["nltk"],
+      install_requires=["nltk"],
       packages=["slopos"])
 
