@@ -6,6 +6,6 @@ python:
   - "3.3"
   - "3.4"
 
-install: "pip install ."
+install: "mv prebuilt/sl-tagger.pickle slopos/sl-tagger.pickle && pip install ."
 
 script: python tests.py
