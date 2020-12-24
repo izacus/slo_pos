@@ -6,7 +6,7 @@ import slopos
 class TestTagger(unittest.TestCase):
 
     def setUp(self):
-        slopos.load_from_path("prebuilt/sl-tagger.pickle")
+        slopos.load_from_path("slopos/sl-tagger.pickle")
 
     def testSentenceTagging(self):
         tagged = slopos.tag("To je test.")

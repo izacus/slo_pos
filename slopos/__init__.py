@@ -19,6 +19,7 @@ import pickle
 import types
 import os
 import sys
+import io
 from collections import Iterable
 
 this_dir = os.path.dirname(os.path.realpath(__file__))
@@ -30,7 +31,9 @@ def load():
     """
     Loads the POS tagger from default packaged file.
     """
-    return load_from_path(os.path.join(this_dir, "sl-tagger.pickle"))
+    import pkgutil
+    this.tagger = pickle.load(io.BytesIO(pkgutil.get_data('slopos', 'sl-tagger.pickle')))
+    return tagger
 
 def load_from_path(tagger_path):
     """

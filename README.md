@@ -69,7 +69,7 @@ python convert_xml_to_txt.py
 In top project directory run the trainer:
 
 ```
-python nltk-trainer/train_tagger.py data/tagged_corpus --reader nltk.corpus.reader.tagged.TaggedCorpusReader --filename out/sl-tagger.pickle
+python nltk-trainer/train_tagger.py data/tagged_corpus --reader nltk.corpus.reader.tagged.TaggedCorpusReader --filename slopos/sl-tagger.pickle
 ```
 
 It'll take a short while and you should see output in form of
