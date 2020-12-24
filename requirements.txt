@@ -1,2 +1,1 @@
-nltk
-future
+nltk==3.5
