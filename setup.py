@@ -26,6 +26,6 @@ setup(name="SloPOS",
       ],
       install_requires=["nltk"],
       long_description=long_description,
-      long_description_content_type='text/markdown'
+      long_description_content_type='text/markdown',
       packages=["slopos"])
 
