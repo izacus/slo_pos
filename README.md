@@ -58,6 +58,12 @@ pip install numpy
 python nltk-trainer/setup.py install
 ```
 
+### Convert input files
+
+```
+python convert_xml_to_txt.py
+```
+
 ### Train
 
 In top project directory run the trainer:
