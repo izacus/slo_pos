@@ -1,8 +1,0 @@
-language: python
-python:
-  - "2.6"
-  - "2.7"
-
-install: "mv prebuilt/sl-tagger.pickle slopos/sl-tagger.pickle && pip install ."
-
-script: python tests.py
