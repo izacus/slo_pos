@@ -18,10 +18,27 @@
 import pickle
 import types
 import os
+import sys
 from collections import Iterable
 
 this_dir = os.path.dirname(os.path.realpath(__file__))
-tagger = pickle.load(open(os.path.join(this_dir, "sl-tagger.pickle"), "rb"))
+this = sys.modules[__name__]
+
+this.tagger = None
+
+def load():
+    """
+    Loads the POS tagger from default packaged file.
+    """
+    return load_from_path(os.path.join(this_dir, "sl-tagger.pickle"))
+
+def load_from_path(tagger_path):
+    """
+    Loads the POS tagger from a file.
+    """
+    with open(tagger_path, "rb") as f:
+        this.tagger = pickle.load(f)
+    return tagger
 
 def tag(sentence):
     """
@@ -30,11 +47,14 @@ def tag(sentence):
 
     Returns a list of tuples in form (word, tag)
     """
-    if isinstance(sentence, types.StringTypes):
+    if this.tagger is None:
+        load()
+
+    if isinstance(sentence, str):
         from nltk.tokenize import WordPunctTokenizer
-        return tagger.tag(WordPunctTokenizer().tokenize(sentence))
+        return this.tagger.tag(WordPunctTokenizer().tokenize(sentence))
     elif isinstance(sentence, Iterable):
-        return tagger.tag(sentence)
+        return this.tagger.tag(sentence)
     else:
         raise ArgumentError("Tag parameter MUST be either a string or an iterable collection of words!")
 
