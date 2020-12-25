@@ -1,6 +1,6 @@
 # NLTK Slovenian POS tagger
 
-[![Build Status](https://travis-ci.org/izacus/slo_pos.svg?branch=master)](https://travis-ci.org/izacus/slo_pos)
+![Python application](https://github.com/izacus/slo_pos/workflows/Python%20application/badge.svg)
 
 This is a project that uses [IJS JOS-1M corpus][1] to train a part-of-speech tagger for Slovenian language.
 
